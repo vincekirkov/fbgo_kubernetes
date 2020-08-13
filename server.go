@@ -12,7 +12,7 @@ func main() {
 
 	godotenv.Load()
 
-	log.Println("Server will start at http://localhost:8000/")
+	log.Println("Server will start at http://localhost:8080/")
 
 	ConnectDatabase()
 
@@ -20,5 +20,5 @@ func main() {
 
 	AddApproutes(route)
 
-	log.Fatal(http.ListenAndServe(":8000", route))
+	log.Fatal(http.ListenAndServe(":8080", route))
 }
