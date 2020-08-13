@@ -1,5 +1,4 @@
 FROM vincekirkov/alpinego:latest
-RUN mkdir /app
 ADD . /app
 WORKDIR /app
 # Add this go mod download command to pull in any dependencies
