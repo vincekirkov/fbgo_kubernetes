@@ -8,4 +8,4 @@ RUN go get -d ./...
 RUN go build .
 # Our start command which kicks off
 # our newly created binary executable
-CMD ["/app/fbgo.exe"]
+CMD /app/app
