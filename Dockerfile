@@ -1,4 +1,4 @@
-FROM vincekirkov:alpinego
+FROM vincekirkov/alpinego:latest
 RUN mkdir /app
 ADD . /app
 WORKDIR /app
