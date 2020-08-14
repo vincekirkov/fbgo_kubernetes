@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: fbgo
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 8080
+  selector:
+    app: fbgo
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fbgo
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: fbgo
+  template:
+    metadata:
+      labels:
+        app: fbgo
+    spec:
+      containers:
+      - name: fbgo
+        image: vincekirkov/fbgo:latest
+        ports:
+        - containerPort: 8080
