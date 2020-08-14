@@ -15,7 +15,7 @@ var Client *mongo.Client
 func ConnectDatabase() {
 	log.Println("Database connecting...")
 	// Set client options
-	clientOptions := options.Client().ApplyURI("mongodb://172.31.2.44:27017")
+	clientOptions := options.Client().ApplyURI("mongodb://localhost:30316")
 
 	// Connect to MongoDB
 	client, err := mongo.Connect(context.TODO(), clientOptions)
